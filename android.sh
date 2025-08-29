@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ### Describe Your Target Android Api or Architectures ###
-ANDROID_API_LEVEL="25"
+ANDROID_API_LEVEL="36"
 ARCH_LIST=("armv8a" "armv7a" "x86" "x86-64")
 
 
@@ -9,9 +9,12 @@ ARCH_LIST=("armv8a" "armv7a" "x86" "x86-64")
 
 ### Enable FFMPEG BUILD MODULES ####
 ENABLED_CONFIG="\
+		--enable-small \
 		--enable-avcodec \
 		--enable-avformat \
 		--enable-avutil \
+  		--enable-jni \
+		--enable-mediacodec \
   		--enable-swscale \
 		--enable-libdav1d \
     	--enable-demuxer=* \
@@ -23,10 +26,10 @@ ENABLED_CONFIG="\
 
 ### Disable FFMPEG BUILD MODULES ####
 DISABLED_CONFIG="\
-		--disable-small \
 		--disable-zlib \
-    	--disable-swresample \
- 		--disable-avfilter \
+		--disable-swscale \
+		--disable-swresample \
+		--disable-avfilter \
 		--disable-v4l2-m2m \
 		--disable-cuda-llvm \
 		--disable-indevs \
@@ -39,7 +42,9 @@ DISABLED_CONFIG="\
   		--disable-ffprobe \
 		--disable-doc \
 		--disable-symver \
-		--disable-gpl "
+		--disable-gpl"
+
+
 
 
 
