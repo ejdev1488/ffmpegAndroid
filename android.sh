@@ -2,7 +2,7 @@
 
 ### Describe Your Target Android Api or Architectures ###
 ANDROID_API_LEVEL="35"
-ARCH_LIST=("armv8a" "armv7a" "x86" "x86-64")
+ARCH_LIST=("arm64-v8a" "armeadi-v7a" "x86" "x86-64")
 
 
 ### Supported Architectures "armv8a" "armv7a" "x86" "x86-64"  ####### 
@@ -22,6 +22,8 @@ ENABLED_CONFIG="\
 		--enable-decoder=h264,hevc,vp8,vp9,libdav1d,flv,vp6f,adpcm_swf,mpeg4,wmv3,mpeg2video,mpeg2audio,msmpeg4v2,msmpeg4v3,theora,amrnb,amrwb,dvvideo,h263,mjpeg,png,jpeg,bmp,webp,mp3,aac,ac3,eac3,flac,opus,vorbis,pcm_s16le,pcm_s24le,alac,wma,ass,ssa,mov_text,subrip,webvtt,dvbsub,dvdsub \
 		--enable-parser=* \
   		--enable-bsf=*\
+		--disable-ffplay \
+  		--disable-ffprobe \
 		--enable-ffmpeg"
 
 
@@ -39,8 +41,6 @@ DISABLED_CONFIG="\
 		--disable-avdevice \
 		--disable-network \
 		--disable-debug \
-		--disable-ffplay \
-  		--disable-ffprobe \
 		--disable-doc \
 		--disable-symver \
 		--disable-gpl"
@@ -174,7 +174,9 @@ configure_ffmpeg(){
 
    make clean
    make -j2
-   make install -j2  
+   make install -j2 
+   find ffmpeg-build -type f -name ffmpeg
+   
 }
 
 echo -e "\e[1;32mCompiling FFMPEG for Android...\e[0m"
