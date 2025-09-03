@@ -177,8 +177,8 @@ configure_ffmpeg(){
    ${EXTRA_CONFIG}
 
   make clean
-  make -j2 ffmpeg
-  make -j2 ffmpeg install
+  make -j2
+  make -j2 install
 
 }
 
