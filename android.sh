@@ -1,8 +1,6 @@
 #!/bin/bash
 
 ### Describe Your Target Android Api or Architectures ##
-FFMPEG_SOURCE_DIR="./ffmpeg"
-FFMPEG_BUILD_DIR="./output"
 ANDROID_API_LEVEL="35"
 ARCH_LIST=("armv8a" "armv7a" "x86" "x86-64")
 
@@ -181,7 +179,6 @@ configure_ffmpeg(){
 
   make clean
   make -j2 ffmpeg
-  make -j2 ffmpeg install
   cp ffmpeg "$PREFIX/ffmpeg"
 
 }
