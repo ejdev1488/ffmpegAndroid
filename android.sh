@@ -179,7 +179,7 @@ configure_ffmpeg(){
 
   make clean
   make -j2 ffmpeg
-  cp ffmpeg "$PREFIX/ffmpeg"
+  make -j2 ffmpeg install
 
 }
 
