@@ -14,6 +14,7 @@ ENABLED_CONFIG="\
 		--enable-avformat \
 		--enable-avutil \
   		--enable-jni \
+		--enable-static \
 		--enable-mediacodec \
   		--enable-swscale \
 		--enable-libdav1d \
@@ -36,7 +37,6 @@ DISABLED_CONFIG="\
 		--disable-libxml2 \
 		--disable-avdevice \
 		--disable-network \
-		--disable-static \
 		--disable-debug \
 		--disable-ffplay \
   		--disable-ffprobe \
