@@ -174,10 +174,7 @@ configure_ffmpeg(){
 
    make clean
    make -j2
-   make install -j2
-   # Copy monolithic ffmpeg binary to output
-   cp "$FFMPEG_SOURCE_DIR/ffmpeg" "$PREFIX/ffmpeg"
-   
+   make install -j2  
 }
 
 echo -e "\e[1;32mCompiling FFMPEG for Android...\e[0m"
