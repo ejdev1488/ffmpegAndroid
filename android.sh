@@ -2,7 +2,7 @@
 
 ### Describe Your Target Android Api or Architectures ###
 ANDROID_API_LEVEL="35"
-ARCH_LIST=("arm64-v8a" "armeadi-v7a" "x86" "x86-64")
+ARCH_LIST=("armv8a" "armv7a" "x86" "x86-64")
 
 
 ### Supported Architectures "armv8a" "armv7a" "x86" "x86-64"  ####### 
