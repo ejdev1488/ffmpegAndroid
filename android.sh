@@ -26,7 +26,7 @@ ENABLED_CONFIG="\
 
 ### Disable FFMPEG BUILD MODULES ####
 DISABLED_CONFIG="\
-		--diable-shared\
+		--disable-shared\
 		--disable-zlib \
 		--disable-swscale \
 		--disable-swresample \
