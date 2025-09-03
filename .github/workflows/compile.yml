@@ -53,6 +53,10 @@ jobs:
         set -e
         ./android.sh
 
+    - name: Validate ELF segment alignment
+      run: |
+        readelf -lW ffmpeg-build/bin/ffmpeg | grep 'LOAD'
+
 
     - name: Upload FFmpeg build artifacts
       uses: actions/upload-artifact@v4
