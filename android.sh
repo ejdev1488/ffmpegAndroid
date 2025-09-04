@@ -9,26 +9,22 @@ ARCH_LIST=("armv8a" "armv7a" "x86" "x86-64")
 
 ### Enable FFMPEG BUILD MODULES ####
 ENABLED_CONFIG="\
-		--enable-small \
-		--enable-avcodec \
-		--enable-avformat \
-		--enable-avutil \
-  		--enable-jni \
-		--enable-static \
-		--enable-mediacodec \
-  		--enable-swscale \
-		--enable-libdav1d \
-    	--enable-demuxer=* \
-	 	--enable-protocol=file \
-		--enable-muxer=mp4 \
-		--enable-demuxer=mov \
-		--enable-filter=scale \
-		--enable-encoder=aac \
-		--enable-parser=h264 \
-		--enable-decoder=h264,hevc,vp8,vp9,libdav1d,flv,vp6f,adpcm_swf,mpeg4,wmv3,mpeg2video,mpeg2audio,msmpeg4v2,msmpeg4v3,theora,amrnb,amrwb,dvvideo,h263,mjpeg,png,jpeg,bmp,webp,mp3,aac,ac3,eac3,flac,opus,vorbis,pcm_s16le,pcm_s24le,alac,wma,ass,ssa,mov_text,subrip,webvtt,dvbsub,dvdsub \
-		--enable-parser=* \
-  		--enable-bsf=*\
-		--enable-ffmpeg"
+        --enable-small \
+        --enable-avcodec \
+        --enable-avformat \
+        --enable-avutil \
+        --enable-static \
+        --enable-swscale \
+        --enable-libdav1d \
+        --enable-muxer=mp4 \
+        --enable-demuxer=mov \
+        --enable-filter=scale \
+        --enable-encoder=aac \
+        --enable-parser=h264 \
+        --enable-decoder=h264,aac,flv,amrnb,amrwb,dvvideo,h263,mjpeg,png,jpeg,bmp,webp,mp3,webm \
+        --enable-parser=* \
+        --enable-bsf=*\
+        --enable-ffmpeg"
 
 
 ### Disable FFMPEG BUILD MODULES ####
