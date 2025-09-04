@@ -9,12 +9,13 @@ ARCH_LIST=("armv8a" "armv7a" "x86" "x86-64")
 
 ### Enable FFMPEG BUILD MODULES ####
 ENABLED_CONFIG="\
-        --enable-small \
         --enable-avcodec \
         --enable-avformat \
         --enable-avutil \
-        --enable-static \
         --enable-swscale \
+        --enable-swresample \
+        --enable-avfilter \
+        --enable-static \
         --enable-libdav1d \
         --enable-muxer=mp4 \
         --enable-demuxer=mov \
@@ -32,8 +33,6 @@ ENABLED_CONFIG="\
 DISABLED_CONFIG="\
 		--disable-shared\
 		--disable-zlib \
-		--disable-swresample \
-		--disable-avfilter \
 		--disable-v4l2-m2m \
 		--disable-cuda-llvm \
 		--disable-indevs \
