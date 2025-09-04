@@ -154,6 +154,7 @@ configure_ffmpeg(){
    
    cd "$FFMPEG_SOURCE_DIR"
    ./configure \
+   --disable-everything \
    --target-os=android \
    --arch=$TARGET_ARCH \
    --cpu=$TARGET_CPU \
