@@ -27,6 +27,7 @@ ENABLED_CONFIG="\
         --enable-ffmpeg"
 
 
+
 ### Disable FFMPEG BUILD MODULES ####
 DISABLED_CONFIG="\
 		--disable-shared\
@@ -45,6 +46,7 @@ DISABLED_CONFIG="\
   		--disable-ffprobe \
 		--disable-symver \
 		--disable-gpl"
+
 
 
 
@@ -150,7 +152,6 @@ configure_ffmpeg(){
    
    cd "$FFMPEG_SOURCE_DIR"
    ./configure \
-   --disable-everything \
    --target-os=android \
    --arch=$TARGET_ARCH \
    --cpu=$TARGET_CPU \
