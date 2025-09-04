@@ -45,8 +45,8 @@ DISABLED_CONFIG="\
 		--disable-network \
 		--disable-debug \
 		--disable-doc \
-  		--enable-ffplay \
-  		--enable-ffprobe \
+  		--disable-ffplay \
+  		--disable-ffprobe \
 		--disable-symver \
 		--disable-gpl"
 
