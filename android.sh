@@ -28,8 +28,6 @@ ENABLED_CONFIG="\
 		--enable-decoder=h264,hevc,vp8,vp9,libdav1d,flv,vp6f,adpcm_swf,mpeg4,wmv3,mpeg2video,mpeg2audio,msmpeg4v2,msmpeg4v3,theora,amrnb,amrwb,dvvideo,h263,mjpeg,png,jpeg,bmp,webp,mp3,aac,ac3,eac3,flac,opus,vorbis,pcm_s16le,pcm_s24le,alac,wma,ass,ssa,mov_text,subrip,webvtt,dvbsub,dvdsub \
 		--enable-parser=* \
   		--enable-bsf=*\
-		--enable-ffplay \
-  		--enable-ffprobe \
 		--enable-ffmpeg"
 
 
@@ -47,6 +45,8 @@ DISABLED_CONFIG="\
 		--disable-network \
 		--disable-debug \
 		--disable-doc \
+  		--enable-ffplay \
+  		--enable-ffprobe \
 		--disable-symver \
 		--disable-gpl"
 
@@ -178,7 +178,7 @@ configure_ffmpeg(){
 
   make clean
   make -j2
-  make -j2 install
+  make install
 
 }
 
