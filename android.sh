@@ -24,7 +24,8 @@ ENABLED_CONFIG="\
         --enable-parser=h264 \
         --enable-decoder=h264,aac,flv,amrnb,amrwb,dvvideo,h263,mjpeg,png,jpeg,bmp,webp,mp3,webm \
         --enable-parser=* \
-        --enable-bsf=*\
+        --enable-bsf=* \
+		--disable-ffprobe \
         --enable-ffmpeg"
 
 
@@ -42,7 +43,6 @@ DISABLED_CONFIG="\
 		--disable-debug \
 		--disable-doc \
   		--disable-ffplay \
-  		--disable-ffprobe \
 		--disable-symver \
 		--disable-gpl"
 
