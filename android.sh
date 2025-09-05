@@ -25,7 +25,7 @@ ENABLED_CONFIG="\
         --enable-decoder=h264,aac,flv,amrnb,amrwb,dvvideo,h263,mjpeg,png,jpeg,bmp,webp,mp3,webm \
         --enable-parser=* \
         --enable-bsf=* \
-		--disable-ffprobe \
+		--enable-ffprobe \
         --enable-ffmpeg"
 
 
