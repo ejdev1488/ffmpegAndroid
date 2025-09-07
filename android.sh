@@ -18,6 +18,9 @@ ENABLED_CONFIG="\
         --enable-static \
         --enable-libdav1d \
         --enable-muxer=mp4 \
+		--enable-gpl \
+  		--enable-libx264 \
+		--enable-libx265 \
         --enable-demuxer=mov \
         --enable-filter=scale \
         --enable-encoder=aac \
@@ -42,9 +45,9 @@ DISABLED_CONFIG="\
 		--disable-network \
 		--disable-debug \
 		--disable-doc \
+  		--disable-x86asm \
   		--disable-ffplay \
-		--disable-symver \
-		--disable-gpl"
+		--disable-symver"
 
 
 
@@ -161,6 +164,8 @@ configure_ffmpeg(){
    --cxx="$CLANGXX" \
    --sysroot="$SYSROOT" \
    --prefix="$PREFIX" \
+   --pkg-config-flags="--static" \
+   --extra-libs=-lpthread \
    --extra-cflags="-fpic -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D__BIONIC_NO_PAGE_SIZE_MACRO -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security $EXTRA_CFLAGS -I$PREFIX/include " \
    --extra-cxxflags="-fpic -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D__BIONIC_NO_PAGE_SIZE_MACRO -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++17 -fexceptions -frtti $EXTRA_CXXFLAGS -I$PREFIX/include " \
    --extra-ldflags=" -Wl,-z,max-page-size=16384 -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--no-undefined-version -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments -L$SYSROOT/usr/lib/$TARGET_ARCH-linux-android/$ANDROID_API_LEVEL -L$PREFIX/lib" \
