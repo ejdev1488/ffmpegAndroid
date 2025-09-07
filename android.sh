@@ -21,6 +21,7 @@ ENABLED_CONFIG="\
         --enable-muxer=mp4 \
   		--enable-libx264 \
 		--enable-libx265 \
+  		--enable-gpl \
         --enable-demuxer=mov \
         --enable-filter=scale \
         --enable-encoder=aac \
@@ -47,7 +48,6 @@ DISABLED_CONFIG="\
 		--disable-doc \
   		--disable-x86asm \
   		--disable-ffplay \
-		--disable-gpl \
 		--disable-symver"
 
 
