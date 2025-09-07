@@ -17,6 +17,7 @@ ENABLED_CONFIG="\
         --enable-avfilter \
         --enable-static \
         --enable-libdav1d \
+		--enable-libmp3lame \
         --enable-muxer=mp4 \
 		--enable-gpl \
   		--enable-libx264 \
