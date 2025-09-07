@@ -19,7 +19,6 @@ ENABLED_CONFIG="\
         --enable-libdav1d \
 		--enable-libmp3lame \
         --enable-muxer=mp4 \
-		--enable-gpl \
   		--enable-libx264 \
 		--enable-libx265 \
         --enable-demuxer=mov \
@@ -48,6 +47,7 @@ DISABLED_CONFIG="\
 		--disable-doc \
   		--disable-x86asm \
   		--disable-ffplay \
+		--disable-gpl \
 		--disable-symver"
 
 
@@ -165,7 +165,6 @@ configure_ffmpeg(){
    --cxx="$CLANGXX" \
    --sysroot="$SYSROOT" \
    --prefix="$PREFIX" \
-   --pkg-config-flags="--static" \
    --extra-libs=-lpthread \
    --extra-cflags="-fpic -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D__BIONIC_NO_PAGE_SIZE_MACRO -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security $EXTRA_CFLAGS -I$PREFIX/include " \
    --extra-cxxflags="-fpic -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D__BIONIC_NO_PAGE_SIZE_MACRO -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -std=c++17 -fexceptions -frtti $EXTRA_CXXFLAGS -I$PREFIX/include " \
