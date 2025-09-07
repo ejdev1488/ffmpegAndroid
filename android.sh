@@ -19,9 +19,6 @@ ENABLED_CONFIG="\
         --enable-libdav1d \
 		--enable-libmp3lame \
         --enable-muxer=mp4 \
-  		--enable-libx264 \
-		--enable-libx265 \
-  		--enable-gpl \
         --enable-demuxer=mov \
         --enable-filter=scale \
         --enable-encoder=aac \
@@ -46,6 +43,7 @@ DISABLED_CONFIG="\
 		--disable-network \
 		--disable-debug \
 		--disable-doc \
+  		--disable-gpl \
   		--disable-x86asm \
   		--disable-ffplay \
 		--disable-symver"
